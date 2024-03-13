@@ -5,18 +5,20 @@ using UnityEngine;
 public class AudioPlayer : MonoBehaviour
 {
     [SerializeField, Range(0, 1)] float amplitude = 0.5f;
-    [SerializeField] static readonly float[] frequency = {261.63f, 277.18f, 293.66f, 311.13f, 329.63f, 349.23f, 369.99f, 392.00f, 415.30f, 440.00f, 466.16f, 493.88f, 523.25f};
-    [SerializeField, Range(0, 11)] int note = 0;
-
+    [SerializeField] float frequency = 261.63f;
+    public AudioSource audioSource;
     double _phase;
     int _sampleRate;
 
     void Awake(){
+        audioSource = GetComponent<AudioSource>();
         _sampleRate = AudioSettings.outputSampleRate;
+        AudioPause();
+        Debug.Log("Audio is supposed to stop at awake");
     }
 
     void OnAudioFilterRead(float[] data, int channels){
-        double phaseIncrement = frequency[note] / _sampleRate;
+        double phaseIncrement = frequency / _sampleRate;
 
         for(int sample = 0; sample < data.Length; sample += channels){
             float value = Mathf.Sin((float) _phase * 2 * Mathf.PI) * amplitude;
@@ -27,5 +29,24 @@ public class AudioPlayer : MonoBehaviour
                 data[sample + channel] = value;
             }
         }
+    }
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.P)){
+            AudioPlay(261.63f);
+            Debug.Log("P pressed");
+        }
+        if(Input.GetKeyUp(KeyCode.O)){
+            AudioPause();
+            Debug.Log("O pressed");
+        }
+    }
+    public void AudioPlay(float keyID){
+        audioSource.Play();
+        frequency = keyID;
+        Debug.Log("AudioPlay called");
+    }
+    public void AudioPause(){
+        audioSource.Stop();
+        Debug.Log("AudioPause called");
     }
 }
