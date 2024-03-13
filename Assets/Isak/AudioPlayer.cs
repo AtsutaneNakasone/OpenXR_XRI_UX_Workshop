@@ -30,16 +30,6 @@ public class AudioPlayer : MonoBehaviour
             }
         }
     }
-    void Update(){
-        if(Input.GetKeyDown(KeyCode.P)){
-            AudioPlay(261.63f);
-            Debug.Log("P pressed");
-        }
-        if(Input.GetKeyUp(KeyCode.O)){
-            AudioPause();
-            Debug.Log("O pressed");
-        }
-    }
     public void AudioPlay(float keyID){
         audioSource.Play();
         frequency = keyID;
