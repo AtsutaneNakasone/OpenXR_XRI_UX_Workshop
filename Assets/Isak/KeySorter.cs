@@ -5,10 +5,15 @@ using UnityEngine;
 public class KeySorter : MonoBehaviour
 {
     [SerializeField] AudioPlayer[] audioPlayers;
-    [SerializeField] public static readonly float[] frequency = {261.63f, 277.18f, 293.66f, 311.13f, 329.63f, 349.23f, 369.99f, 392.00f, 415.30f, 440.00f, 466.16f, 493.88f, 523.25f};
-    [SerializeField, Range(0, 11)] int frequencyID;
+    [SerializeField] float[] frequency = {261.63f, 277.18f, 293.66f, 311.13f, 329.63f, 349.23f, 369.99f, 392.00f, 415.30f, 440.00f, 466.16f, 493.88f, 523.25f, 554.37f};
+    [SerializeField, Range(0, 12)] int frequencyID;
     [SerializeField] int audioPlayersID;
+    [SerializeField] AnimationWave[] keys;
+
     void Awake(){
+        for(int i = 0; i < keys.Length; i++){
+            keys[i].AssignID(frequency[i]);
+        } 
     }
     void Update(){
         if(Input.GetKeyDown(KeyCode.P)){
@@ -47,5 +52,11 @@ public class KeySorter : MonoBehaviour
             }
             Debug.Log("LeftArrow pressed");
         }
+    }
+    public void KeyPressed(float note){
+        audioPlayers[audioPlayersID].AudioPlay(note);
+    }
+    public void KeyReleased(){
+        audioPlayers[audioPlayersID].AudioPause();
     }
 }
