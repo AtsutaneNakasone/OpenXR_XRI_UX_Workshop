@@ -17,12 +17,12 @@ public class KeySorter : MonoBehaviour
     }
     void Update(){
         if(Input.GetKeyDown(KeyCode.D)){
-            audioPlayers[1].AudioPlay(293.66f);
-            Debug.Log("P pressed");
+            audioPlayers[audioPlayersID].AudioPlay(frequency[frequencyID]);
+            Debug.Log("D pressed");
         }
-        if(Input.GetKeyUp(KeyCode.D)){
-            audioPlayers[1].AudioPause();
-            Debug.Log("O pressed");
+        if(Input.GetKeyUp(KeyCode.F)){
+            audioPlayers[audioPlayersID].AudioPause();
+            Debug.Log("F pressed");
         }
         if(Input.GetKeyUp(KeyCode.DownArrow)){
             frequencyID--;
