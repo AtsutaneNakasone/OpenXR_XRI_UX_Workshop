@@ -10,11 +10,11 @@ public class AnimationWave : MonoBehaviour
     float frequency;
     float offset;
 
-    void Awake(){
+    /*void Awake(){
         keySorter = transform.parent.parent.GetComponent<KeySorter>();
         offset = Random.Range(0, 1f);
     }
-    /*void Update(){
+    void Update(){
         newPosition = transform.position;
         newPosition.y += Mathf.Cos(Time.time + offset) * Time.deltaTime * speed;
         transform.position = newPosition;
