@@ -6,6 +6,9 @@ public class AnimatedText : MonoBehaviour
 {
     //[SerializeField] AudioSource audioSourcName;
     //[SerializeField] AudioClip clip;
+    [SerializeField] GameObject triangleButtonPlay;
+
+
     GameObject playButton;
 
     public void PlayButtonFunc()
