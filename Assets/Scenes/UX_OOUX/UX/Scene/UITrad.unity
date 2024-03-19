@@ -862,7 +862,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d15a1247e41315b40b80d89016cc321f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d15a1247e41315b40b80d89016cc321f,
         type: 3}
@@ -1323,7 +1323,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f0bc70e4aeac1234b8ae4b7cdcf29018,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0bc70e4aeac1234b8ae4b7cdcf29018,
         type: 3}
@@ -1567,7 +1567,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fc05a7e5471c65745bf5882466efd47a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc05a7e5471c65745bf5882466efd47a,
         type: 3}
@@ -3025,7 +3025,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1042219195}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1042219198
+--- !u!111 &1042219199
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042219197}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 43f11ea0f091f4743b47c8c50dd844b5, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &1042219202
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -4058,7 +4073,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 275721b7bb619024f8963511e237cfed,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 275721b7bb619024f8963511e237cfed,
         type: 3}
@@ -4501,7 +4516,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 483ef5d733f4c7a499f143c75d8510f3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 483ef5d733f4c7a499f143c75d8510f3,
         type: 3}
