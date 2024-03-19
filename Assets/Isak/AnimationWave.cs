@@ -31,7 +31,7 @@ public class AnimationWave : MonoBehaviour
     }
     void OnMouseDown(){
         Debug.Log($"Hit {this.gameObject}");
-        keySorter.KeyPressed(frequency);
+        keySorter.KeyPressed(0);
     }
     void OnMouseUp(){
         keySorter.KeyReleased();

@@ -53,8 +53,8 @@ public class KeySorter : MonoBehaviour
             Debug.Log("LeftArrow pressed");
         }
     }
-    public void KeyPressed(float note){
-        audioPlayers[audioPlayersID].AudioPlay(note);
+    public void KeyPressed(int noteID){
+        audioPlayers[audioPlayersID].AudioPlay(frequency[noteID]);
     }
     public void KeyReleased(){
         audioPlayers[audioPlayersID].AudioPause();
