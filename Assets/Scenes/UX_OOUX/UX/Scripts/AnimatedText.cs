@@ -17,11 +17,12 @@ public class AnimatedText : MonoBehaviour
     {
         Debug.Log("playbutton F(x) has been initiated");
         playAnim.SetBool("OpenMenu", true);
-        //if (playAnim != null) playAnim.Play("PlayButtonAnim");
+
 
         //Soundname.PlayOneShot(clip);
     }
-    /*
+
+/*
         public void PlayButtonFuncOff()
     {
         Debug.Log("playbutton F(x) has been terminated");
@@ -30,19 +31,20 @@ public class AnimatedText : MonoBehaviour
 
         //Soundname.PlayOneShot(clip);
     }
+*/
 
     public void GraphicsButtonFunc()
     {
-        Animator anim = graphicsButton.GetComponent<Animator>();
-        if (anim != null) anim.Play("GraphicsButtonAnim");
+        Debug.Log("GraphicButton F(x) has been initiated");
+        playAnim.SetBool("GraphicMenu", true);
 
         //Soundname.PlayOneShot(clip);
     }
 
     public void AudioButtonFunc()
     {
-        Animator anim = audioButton.GetComponent<Animator>();
-        if (anim != null) anim.Play("AudioButtonAnim");
+        Debug.Log("AudioButton F(x) has been initiated");
+        playAnim.SetBool("AudioMenu", true);
 
         //Soundname.PlayOneShot(clip);
     }
@@ -62,5 +64,5 @@ public class AnimatedText : MonoBehaviour
 
         //Soundname.PlayOneShot(clip);
     }
-*/
+
 }
