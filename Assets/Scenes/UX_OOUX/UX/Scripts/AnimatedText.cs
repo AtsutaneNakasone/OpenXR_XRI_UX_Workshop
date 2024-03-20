@@ -4,18 +4,29 @@ public class AnimatedText : MonoBehaviour
 {
     //[SerializeField] AudioSource audioSourcName;
     //[SerializeField] AudioClip clip;
-    [SerializeField] GameObject triangleButtonPlay;
+    //[SerializeField] GameObject triangleButtonPlay;
 
     private GameObject playButton;
     private GameObject graphicsButton;
     private GameObject audioButton;
     private GameObject exitButton;
     private GameObject gameModeButton;
+    [SerializeField] private Animator playAnim;
 
     public void PlayButtonFunc()
     {
-        Animator anim = playButton.GetComponent<Animator>();
-        if (anim != null) anim.Play("PlayButtonAnim");
+        Debug.Log("playbutton F(x) has been initiated");
+        playAnim.SetBool("OpenMenu", true);
+        //if (playAnim != null) playAnim.Play("PlayButtonAnim");
+
+        //Soundname.PlayOneShot(clip);
+    }
+    /*
+        public void PlayButtonFuncOff()
+    {
+        Debug.Log("playbutton F(x) has been terminated");
+        playAnim.SetBool("OpenMenu", false);
+        //if (playAnim != null) playAnim.Play("PlayButtonAnim");
 
         //Soundname.PlayOneShot(clip);
     }
@@ -51,5 +62,5 @@ public class AnimatedText : MonoBehaviour
 
         //Soundname.PlayOneShot(clip);
     }
-
+*/
 }
